@@ -1,0 +1,50 @@
+{
+  "name": "read-image",
+  "version": "0.0.0",
+  "description": "Universal Image File Reader. In the Browser, uses read-pixels. In NodeJS, uses jpeg-js or pngjs.",
+  "main": "dist/read-image.node.js",
+  "browser": "dist/read-image.web.js",
+  "unpkg": "dist/read-image.web.js",
+  "files": [
+    "dist/read-image.node.js",
+    "dist/read-image.web.js",
+    "src/read-image.js"
+  ],
+  "scripts": {
+    "build": "npm run build:node && npm run build:web",
+    "build:node": "npx webpack --devtool eval-source-map --entry ./src/read-image.js --output-filename read-image.node.js --output-path dist -t node",
+    "build:web": "npx webpack --devtool eval-source-map --entry ./src/read-image.js --output-filename read-image.web.js --output-path dist -t web",
+    "format": "npx prettier --arrow-parens=avoid src/*.js test.js --write",
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanielJDufour/read-image.git"
+  },
+  "keywords": [
+    "im",
+    "image",
+    "isomorphic",
+    "jpeg",
+    "jpeg-js",
+    "jpg",
+    "pixels",
+    "png",
+    "pngjs",
+    "universal"
+  ],
+  "author": "Daniel J. Dufour",
+  "license": "CC0-1.0",
+  "bugs": {
+    "url": "https://github.com/DanielJDufour/read-image/issues"
+  },
+  "homepage": "https://github.com/DanielJDufour/read-image#readme",
+  "devDependencies": {
+    "flug": "*"
+  },
+  "dependencies": {
+    "get-byte": "*",
+    "read-jpg": "^0.0.2",
+    "read-png": "^0.0.1"
+  }
+}
