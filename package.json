@@ -1,6 +1,6 @@
 {
   "name": "readim",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Universal Image File Reader. In the Browser, uses read-pixels. In NodeJS, uses jpeg-js or pngjs.",
   "main": "dist/readim.node.js",
   "browser": "dist/readim.web.js",
