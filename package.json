@@ -7,15 +7,20 @@
   "unpkg": "dist/readim.web.js",
   "files": [
     "dist/readim.node.js",
+    "dist/readim.node.js.map",
     "dist/readim.web.js",
+    "dist/readim.web.js.map",
     "src/readim.js"
   ],
   "scripts": {
     "build": "npm run build:node && npm run build:web",
-    "build:node": "npx webpack --devtool eval-source-map --entry ./src/readim.js --output-filename readim.node.js --output-path dist -t node",
-    "build:web": "npx webpack --devtool eval-source-map --entry ./src/readim.js --output-filename readim.web.js --output-path dist -t web",
-    "format": "npx prettier --arrow-parens=avoid src/*.js test.js --write",
-    "test": "node test.js"
+    "build:node": "npx webpack --config=webpack.config.js --target node",
+    "build:web": "npx webpack --config=webpack.config.js  --target web",
+    "format": "npx prettier --arrow-parens=avoid src/*.js *.js --write",
+    "test:dev": "READIM_PATH='./src/readim.js' node test.js",
+    "test:prod": "npm run test:prod:node",
+    "test:prod:node": "npm run build:node && READIM_PATH='./dist/readim.node.js' node test.js",
+    "test": "npm run test:dev && npm run test:prod"
   },
   "repository": {
     "type": "git",

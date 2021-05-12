@@ -1,11 +1,11 @@
 const { readFileSync } = require("fs");
 const test = require("flug");
-const readImage = require("./src/readim.js");
+const readim = require(process.env.READIM_PATH);
 
 ["jpg", "png"].forEach(format => {
   test("reading " + format, async ({ eq }) => {
     const buffer = readFileSync("./test/flower." + format);
-    const result = await readImage({
+    const result = await readim({
       data: buffer,
       debug: false,
     });
