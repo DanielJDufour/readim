@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script src="./dist/read-image.web.js"></script>
+    <script src="./dist/readim.web.js"></script>
   </head>
   <body style="background: yellow;">
     <script>
         (async () => {
           try {
             const ab = await fetch("./test/flower.jpg").then(res => res.arrayBuffer());
-            await readImage({ data: ab, debug: true });
-            await readImage({ data: new Uint8Array(ab), debug: true });
+            await readim({ data: ab, debug: true });
+            await readim({ data: new Uint8Array(ab), debug: true });
             document.body.style.background = "green";
           } catch (error) {
             console.error(error);

@@ -1,25 +1,25 @@
 {
-  "name": "read-image",
+  "name": "readim",
   "version": "0.0.0",
   "description": "Universal Image File Reader. In the Browser, uses read-pixels. In NodeJS, uses jpeg-js or pngjs.",
-  "main": "dist/read-image.node.js",
-  "browser": "dist/read-image.web.js",
-  "unpkg": "dist/read-image.web.js",
+  "main": "dist/readim.node.js",
+  "browser": "dist/readim.web.js",
+  "unpkg": "dist/readim.web.js",
   "files": [
-    "dist/read-image.node.js",
-    "dist/read-image.web.js",
-    "src/read-image.js"
+    "dist/readim.node.js",
+    "dist/readim.web.js",
+    "src/readim.js"
   ],
   "scripts": {
     "build": "npm run build:node && npm run build:web",
-    "build:node": "npx webpack --devtool eval-source-map --entry ./src/read-image.js --output-filename read-image.node.js --output-path dist -t node",
-    "build:web": "npx webpack --devtool eval-source-map --entry ./src/read-image.js --output-filename read-image.web.js --output-path dist -t web",
+    "build:node": "npx webpack --devtool eval-source-map --entry ./src/readim.js --output-filename readim.node.js --output-path dist -t node",
+    "build:web": "npx webpack --devtool eval-source-map --entry ./src/readim.js --output-filename readim.web.js --output-path dist -t web",
     "format": "npx prettier --arrow-parens=avoid src/*.js test.js --write",
     "test": "node test.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DanielJDufour/read-image.git"
+    "url": "git+https://github.com/DanielJDufour/readim.git"
   },
   "keywords": [
     "im",
@@ -36,9 +36,9 @@
   "author": "Daniel J. Dufour",
   "license": "CC0-1.0",
   "bugs": {
-    "url": "https://github.com/DanielJDufour/read-image/issues"
+    "url": "https://github.com/DanielJDufour/readim/issues"
   },
-  "homepage": "https://github.com/DanielJDufour/read-image#readme",
+  "homepage": "https://github.com/DanielJDufour/readim#readme",
   "devDependencies": {
     "flug": "*"
   },

@@ -1,6 +1,6 @@
 const { readFileSync } = require("fs");
 const test = require("flug");
-const readImage = require("./src/read-image.js");
+const readImage = require("./src/readim.js");
 
 ["jpg", "png"].forEach(format => {
   test("reading " + format, async ({ eq }) => {
