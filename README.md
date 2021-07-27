@@ -11,7 +11,7 @@ npm install readim
 import readim from 'readim';
 
 const result = readim({ data: arrayBuffer });
-// result is { height: 200, width: 100, pixels: [[[]]] }
+// result is { height: 200, width: 100, pixels: [r1, g1, b1, a1, r2, ...] }
 ```
 
 # usage in NodeJS / backend
@@ -19,5 +19,5 @@ const result = readim({ data: arrayBuffer });
 const readim = require("readim");
 
 const result = readim({ data: buffer });
-// result is { height: 200, width: 100, pixels: [[[]]] }
+// result is { height: 200, width: 100, pixels: [r1, g1, b1, a1, r2, ...] }
 ```
