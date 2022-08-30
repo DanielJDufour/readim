@@ -1,6 +1,6 @@
 {
   "name": "readim",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "Universal Image File Reader",
   "main": "dist/readim.node.js",
   "browser": "dist/readim.web.js",
