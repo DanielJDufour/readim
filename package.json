@@ -7,6 +7,7 @@
   "unpkg": "dist/readim.web.js",
   "types": "readim.d.ts",
   "files": [
+    "readim.d.ts",
     "dist/readim.node.js",
     "dist/readim.node.js.map",
     "dist/readim.web.js",
