@@ -1,5 +1,5 @@
 # readim
-Universal Image File Reader.  In the Browser, uses read-pixels.  In NodeJS, uses jpeg-js or pngjs.
+> Universal Image File Reader
 
 # install
 ```bash
@@ -10,14 +10,14 @@ npm install readim
 ```js
 import readim from 'readim';
 
-const result = readim({ data: arrayBuffer });
-// result is { height: 200, width: 100, pixels: [[[]]] }
+readim(arrayBuffer);
+{ height: 200, width: 100, data: Uint8ClampedArray [ 112, 221, 31, 255, ... ] }
 ```
 
 # usage in NodeJS / backend
 ```js
 const readim = require("readim");
 
-const result = readim({ data: buffer });
-// result is { height: 200, width: 100, pixels: [[[]]] }
+readim(buffer);
+{ height: 200, width: 100, data: Uint8ClampedArray [ 112, 221, 31, 255, ... ] }
 ```

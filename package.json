@@ -1,10 +1,11 @@
 {
   "name": "readim",
   "version": "0.0.2",
-  "description": "Universal Image File Reader. In the Browser, uses read-pixels. In NodeJS, uses jpeg-js or pngjs.",
+  "description": "Universal Image File Reader",
   "main": "dist/readim.node.js",
   "browser": "dist/readim.web.js",
   "unpkg": "dist/readim.web.js",
+  "types": "readim.d.ts",
   "files": [
     "dist/readim.node.js",
     "dist/readim.node.js.map",
@@ -18,8 +19,9 @@
     "build:web": "npx webpack --config=webpack.config.js  --target web",
     "format": "npx prettier --arrow-parens=avoid src/*.js *.js --write",
     "test:dev": "READIM_PATH='./src/readim.js' node test.js",
-    "test:prod": "npm run test:prod:node",
+    "test:prod": "npm run test:prod:node && npm run test:prod:ts-node",
     "test:prod:node": "npm run build:node && READIM_PATH='./dist/readim.node.js' node test.js",
+    "test:prod:ts-node": "npm run build:node && npx ts-node ./test.ts",
     "test": "npm run test:dev && npm run test:prod"
   },
   "repository": {
